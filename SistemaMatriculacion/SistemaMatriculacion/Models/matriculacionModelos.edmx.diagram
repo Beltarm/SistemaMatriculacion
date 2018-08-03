@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="71b95c67c1bf455da4bd61bd006e4c07" Name="Diagram1">
+        <EntityTypeShape EntityType="Modelos.ESTUDIANTE" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.ESTUDIO" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.MATERIA" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.NOTA" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.PROFESOR" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.SECCION" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.SECCION_MATERIA" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelos.TUTOR" Width="1.5" PointX="1.5" PointY="18.75" IsExpanded="true" />
+        <AssociationConnector Association="Modelos.FK__NOTA__MATRICULA__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelos.FK__ESTUDIO__ID_PROF__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelos.FK__NOTA__ID_MATERIA__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelos.FK__SECCION_M__ID_MA__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelos.FK__SECCION_M__ID_PR__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelos.FK__SECCION_M__ID_SE__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelos.ESTUDIANTE_SECCION" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelos.ESTUDIANTE_TUTOR" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
