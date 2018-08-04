@@ -1,7 +1,7 @@
-﻿CREATE DATABASE "Sistema matriculacion"
+﻿CREATE DATABASE "Sistema_matriculacion"
 GO
 
-USE "Sistema matriculacion"
+USE "Sistema_matriculacion"
 GO
 
 CREATE TABLE ESTUDIANTE(
