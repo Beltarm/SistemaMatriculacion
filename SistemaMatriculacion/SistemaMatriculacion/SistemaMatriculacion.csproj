@@ -358,11 +358,11 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Views\img\about-bg.jpg" />
-    <Content Include="Views\img\contact-bg.jpg" />
-    <Content Include="Views\img\home-bg.jpg" />
-    <Content Include="Views\img\post-bg.jpg" />
-    <Content Include="Views\img\post-sample-image.jpg" />
+    <Content Include="Images\about-bg.jpg" />
+    <Content Include="Images\contact-bg.jpg" />
+    <Content Include="Images\home-bg.jpg" />
+    <Content Include="Images\post-bg.jpg" />
+    <Content Include="Images\post-sample-image.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
