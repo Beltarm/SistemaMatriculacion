@@ -26,16 +26,20 @@ namespace SistemaMatriculacion.Models
         [Display(Name ="Matricula")]
         public string MATRICULA { get; set; }
 
-        [Display(Name = "Nombre")]
+        [Display(Name = "Nombre"), StringLength(20)]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string NOMBRE_ESTUDIANTE { get; set; }
 
-        [Display(Name = "Apellido")]
+        [Display(Name = "Apellido"), StringLength(20)]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string APELLIDO_ESTUDIANTE { get; set; }
 
         [Display(Name = "Fecha de Nacimiento")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public System.DateTime FECHA_NACIMIENTO_ESTUDIANTE { get; set; }
 
         [Display(Name = "Sexo")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string SEXO_ESTUDIANTE { get; set; }
 
         [Display(Name = "Direccion")]
