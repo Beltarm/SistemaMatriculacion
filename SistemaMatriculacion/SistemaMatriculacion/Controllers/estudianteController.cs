@@ -20,6 +20,7 @@ namespace SistemaMatriculacion.Controllers
             return View(db.ESTUDIANTE.ToList());
         }
 
+        [Authorize(Roles = "estudiante")]
         // GET: ESTUDIANTE/Details/5
         public ActionResult Details(string id)
         {
