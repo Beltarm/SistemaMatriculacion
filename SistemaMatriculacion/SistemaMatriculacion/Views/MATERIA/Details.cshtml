@@ -1,0 +1,26 @@
+﻿@model SistemaMatriculacion.Models.MATERIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MATERIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_MATERIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_MATERIA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_MATERIA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
