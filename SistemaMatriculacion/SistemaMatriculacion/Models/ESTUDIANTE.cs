@@ -42,7 +42,7 @@ namespace SistemaMatriculacion.Models
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string SEXO_ESTUDIANTE { get; set; }
 
-        [Display(Name = "Direccion")]
+        [Display(Name = "Direccion"), StringLength(200)]
         public string DIRECCION_ESTUDIANTE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
