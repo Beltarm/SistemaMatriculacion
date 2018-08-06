@@ -1,0 +1,66 @@
+﻿@model SistemaMatriculacion.Models.PROFESOR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PROFESOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_PROFESOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_PROFESOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APELLIDO_PROFESOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APELLIDO_PROFESOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO_PROFESOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_NACIMIENTO_PROFESOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEXO_PROFESOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEXO_PROFESOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION_PROFESOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION_PROFESOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO_PROFESOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO_PROFESOR)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_PROFESOR }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

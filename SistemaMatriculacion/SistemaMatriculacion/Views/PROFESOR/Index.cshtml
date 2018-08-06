@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SistemaMatriculacion.Models.PROFESOR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_PROFESOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APELLIDO_PROFESOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO_PROFESOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEXO_PROFESOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION_PROFESOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO_PROFESOR)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_PROFESOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDO_PROFESOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO_PROFESOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEXO_PROFESOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION_PROFESOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO_PROFESOR)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_PROFESOR }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_PROFESOR }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_PROFESOR })
+        </td>
+    </tr>
+}
+
+</table>

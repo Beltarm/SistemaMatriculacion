@@ -50,12 +50,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SEXO_ESTUDIANTE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <label class="radio-inline">
-                    @Html.RadioButtonFor(Model => Model.SEXO_ESTUDIANTE, "M", new { @type = "radio" })Masculino
-                </label>
-                <label class="radio-inline">
-                    @Html.RadioButtonFor(Model => Model.SEXO_ESTUDIANTE, "F")Femenino
-                </label>
+                @Html.EditorFor(model => model.SEXO_ESTUDIANTE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SEXO_ESTUDIANTE, "", new { @class = "text-danger" })
             </div>
         </div>
 
