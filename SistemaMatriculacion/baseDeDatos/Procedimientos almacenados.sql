@@ -1,0 +1,43 @@
+create proc insertar_datos
+@Matricula varchar(8),
+@Nombre_estudiante varchar(20),
+@Apellido_estudiante varchar(20),
+@Fecha_nacimiento date,
+@Sexo_estudiante varchar(1),
+@Direccion_Estudiante varchar(200)
+as
+insert into ESTUDIANTE
+(MATRICULA, NOMBRE_ESTUDIANTE, APELLIDO_ESTUDIANTE, FECHA_NACIMIENTO_ESTUDIANTE, SEXO_ESTUDIANTE, DIRECCION_ESTUDIANTE )
+VALUES
+(@Matricula,@Nombre_estudiante, @Apellido_estudiante, @Fecha_nacimiento, @Sexo_estudiante,  @Direccion_Estudiante )
+
+
+
+CREATE PROC buscar_matricula
+@Matricula varchar(8)
+as
+select*from ESTUDIANTE
+where MATRICULA=@Matricula
+go
+
+
+create proc eliminar_estudiante
+@Matricula varchar(8)
+as
+delete ESTUDIANTE
+where MATRICULA=@Matricula
+
+
+create proc insertar_datos_profesor
+@id_profesor int,
+@Nombre_profesor varchar(20),
+@Apellido_profesor varchar(20),
+@Fecha_nacimiento date,
+@Sexo_profesor varchar(1),
+@Direccion_profesor varchar(200),
+@telefono_profesor varchar(11)
+as
+insert into PROFESOR
+(ID_PROFESOR, NOMBRE_PROFESOR, APELLIDO_PROFESOR, FECHA_NACIMIENTO_PROFESOR, SEXO_PROFESOR, DIRECCION_PROFESOR, TELEFONO_PROFESOR )
+VALUES
+(@id_profesor, @Nombre_profesor, @Apellido_profesor, @Fecha_nacimiento, @Sexo_profesor,  @Direccion_profesor, @telefono_profesor )
