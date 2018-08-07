@@ -11,6 +11,7 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class MATERIA
     {
@@ -20,10 +21,13 @@ namespace SistemaMatriculacion.Models
             this.NOTA = new HashSet<NOTA>();
             this.SECCION_MATERIA = new HashSet<SECCION_MATERIA>();
         }
-    
+
         public int ID_MATERIA { get; set; }
+
+        [Display(Name = "Nombre")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string NOMBRE_MATERIA { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NOTA> NOTA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

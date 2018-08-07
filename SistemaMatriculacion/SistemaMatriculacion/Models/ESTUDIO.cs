@@ -11,13 +11,17 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class ESTUDIO
     {
         public int ID_ESTUDIO { get; set; }
+
+        [Required(ErrorMessage = "Este campo es olbigatorio")]
+        [Display(Name = "Descripcion")]
         public string DESCRIPCION_ESTUDIO { get; set; }
-        public Nullable<int> ID_PROFESOR { get; set; }
-    
+
+        public Nullable<int> ID_PROFESOR { get; set; }   
         public virtual PROFESOR PROFESOR { get; set; }
     }
 }
