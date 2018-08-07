@@ -34,7 +34,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FECHA_NACIMIENTO_PROFESOR, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FECHA_NACIMIENTO_PROFESOR, new { htmlAttributes = new { @class = "form-control" }, new { @ = "FORMATO MM-DD-YYYY" } })
+                @Html.EditorFor(model => model.FECHA_NACIMIENTO_PROFESOR, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FECHA_NACIMIENTO_PROFESOR, "", new { @class = "text-danger" })
             </div>
         </div>

@@ -24,7 +24,6 @@ namespace SistemaMatriculacion.Models
         public int ID_SECCION { get; set; }
         public string NOMBRE_SECCION { get; set; }
         public int CANTIDAD_ESTUDIANTES { get; set; }
-        public string HORARIO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SECCION_MATERIA> SECCION_MATERIA { get; set; }

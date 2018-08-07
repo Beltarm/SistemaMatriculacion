@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ESTUDIANTE">
           <Key>
             <PropertyRef Name="ID_ESTUDIANTE" />
@@ -75,7 +75,6 @@
           <Property Name="ID_SECCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE_SECCION" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CANTIDAD_ESTUDIANTES" Type="int" Nullable="false" />
-          <Property Name="HORARIO" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="SECCION_MATERIA">
           <Key>
@@ -281,8 +280,7 @@
             <End Role="SECCION_MATERIA" EntitySet="SECCION_MATERIA" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -350,7 +348,6 @@
           <Property Name="ID_SECCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE_SECCION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CANTIDAD_ESTUDIANTES" Type="Int32" Nullable="false" />
-          <Property Name="HORARIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="SECCION_MATERIA" Relationship="Self.FK__SECCION_M__ID_SE__1BC821DD" FromRole="SECCION" ToRole="SECCION_MATERIA" />
           <NavigationProperty Name="ESTUDIANTE" Relationship="Self.ESTUDIANTE_SECCION" FromRole="SECCION" ToRole="ESTUDIANTE" />
         </EntityType>
@@ -575,7 +572,6 @@
                 <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
                 <ScalarProperty Name="NOMBRE_SECCION" ColumnName="NOMBRE_SECCION" />
                 <ScalarProperty Name="CANTIDAD_ESTUDIANTES" ColumnName="CANTIDAD_ESTUDIANTES" />
-                <ScalarProperty Name="HORARIO" ColumnName="HORARIO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

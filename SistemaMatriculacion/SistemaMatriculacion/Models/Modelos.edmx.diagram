@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="Model.MATERIA" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.NOTA" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.PROFESOR" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SECCION" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SECCION" Width="1.5" PointX="0.875" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.SECCION_MATERIA" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.TUTOR" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />

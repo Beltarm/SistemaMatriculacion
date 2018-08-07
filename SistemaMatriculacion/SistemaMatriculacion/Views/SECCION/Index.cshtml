@@ -17,9 +17,6 @@
         <th>
             @Html.DisplayNameFor(model => model.CANTIDAD_ESTUDIANTES)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HORARIO)
-        </th>
         <th></th>
     </tr>
 
@@ -30,9 +27,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CANTIDAD_ESTUDIANTES)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HORARIO)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID_SECCION }) |
