@@ -12,7 +12,7 @@ namespace SistemaMatriculacion.Controllers
 {
     public class PROFESORController : Controller
     {
-        private Sistema_matriculacionEntities2 db = new Sistema_matriculacionEntities2();
+        private Sistema_matriculacionEntities db = new Sistema_matriculacionEntities();
 
         // GET: PROFESOR
         public ActionResult Index()
