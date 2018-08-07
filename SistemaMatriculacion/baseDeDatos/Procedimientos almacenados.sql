@@ -1,5 +1,5 @@
-create proc insertar_datos
-@Matricula varchar(8),
+create proc insertar_datos_estudiantes
+@id_estudiante int,
 @Nombre_estudiante varchar(20),
 @Apellido_estudiante varchar(20),
 @Fecha_nacimiento date,
@@ -7,25 +7,25 @@ create proc insertar_datos
 @Direccion_Estudiante varchar(200)
 as
 insert into ESTUDIANTE
-(MATRICULA, NOMBRE_ESTUDIANTE, APELLIDO_ESTUDIANTE, FECHA_NACIMIENTO_ESTUDIANTE, SEXO_ESTUDIANTE, DIRECCION_ESTUDIANTE )
+(ID_ESTUDIANTE, NOMBRE_ESTUDIANTE, APELLIDO_ESTUDIANTE, FECHA_NACIMIENTO_ESTUDIANTE, SEXO_ESTUDIANTE, DIRECCION_ESTUDIANTE )
 VALUES
-(@Matricula,@Nombre_estudiante, @Apellido_estudiante, @Fecha_nacimiento, @Sexo_estudiante,  @Direccion_Estudiante )
+(@id_estudiante, @Nombre_estudiante, @Apellido_estudiante, @Fecha_nacimiento, @Sexo_estudiante,  @Direccion_Estudiante )
 
 
 
 CREATE PROC buscar_matricula
-@Matricula varchar(8)
+@ID_ESTUDIANTE INT
 as
 select*from ESTUDIANTE
-where MATRICULA=@Matricula
+where ID_ESTUDIANTE=@ID_ESTUDIANTE
 go
 
 
 create proc eliminar_estudiante
-@Matricula varchar(8)
+@ID_ESTUDIANTE INT
 as
 delete ESTUDIANTE
-where MATRICULA=@Matricula
+where ID_ESTUDIANTE=@ID_ESTUDIANTE
 
 
 create proc insertar_datos_profesor
