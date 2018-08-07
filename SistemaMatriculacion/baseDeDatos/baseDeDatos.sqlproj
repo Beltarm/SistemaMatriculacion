@@ -60,5 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Script.sql" />
+    <None Include="Triggers y funciones.sql" />
   </ItemGroup>
 </Project>
