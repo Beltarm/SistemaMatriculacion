@@ -122,6 +122,8 @@ namespace SistemaMatriculacion.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID_SECCION,ID_MATERIA,ID_PROFESOR,HORARIO")] SECCION_MATERIA sECCION_MATERIA)
         {
+            try {
+
             if (ModelState.IsValid)
             {
                 db.Entry(sECCION_MATERIA).State = EntityState.Modified;
@@ -132,6 +134,19 @@ namespace SistemaMatriculacion.Controllers
             ViewBag.ID_PROFESOR = new SelectList(db.PROFESOR, "ID_PROFESOR", "NOMBRE_PROFESOR", sECCION_MATERIA.ID_PROFESOR);
             ViewBag.ID_SECCION = new SelectList(db.SECCION, "ID_SECCION", "NOMBRE_SECCION", sECCION_MATERIA.ID_SECCION);
             return View(sECCION_MATERIA);
+            }
+
+            catch (System.Exception excep) when (excep.HResult == -2146233087)
+            {
+                ViewBag.Error = 1;
+                ViewBag.ID_MATERIA = new SelectList(db.MATERIA, "ID_MATERIA", "NOMBRE_MATERIA");
+                ViewBag.ID_PROFESOR = new SelectList(db.PROFESOR, "ID_PROFESOR", "NOMBRE_PROFESOR");
+                ViewBag.ID_SECCION = new SelectList(db.SECCION, "ID_SECCION", "NOMBRE_SECCION");
+                return View(sECCION_MATERIA);
+
+            }
+          
+
         }
 
         // GET: SECCION_MATERIA/Delete/5

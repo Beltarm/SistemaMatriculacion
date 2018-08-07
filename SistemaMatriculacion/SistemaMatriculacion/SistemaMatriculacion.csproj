@@ -436,7 +436,6 @@
     <Content Include="Views\SECCION_MATERIA\Delete.cshtml" />
     <Content Include="Views\SECCION_MATERIA\Details.cshtml" />
     <Content Include="Views\SECCION_MATERIA\Edit.cshtml" />
-    <Content Include="Views\SECCION_MATERIA\Error.cshtml" />
     <Content Include="Views\SECCION_MATERIA\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
