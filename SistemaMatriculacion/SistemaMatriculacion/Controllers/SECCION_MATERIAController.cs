@@ -87,8 +87,11 @@ namespace SistemaMatriculacion.Controllers
 
             catch (System.Exception excep) when (excep.HResult == -2146233087)
             {
-
-                return View("Error");
+                ViewBag.Error = 1;
+                ViewBag.ID_MATERIA = new SelectList(db.MATERIA, "ID_MATERIA", "NOMBRE_MATERIA");
+                ViewBag.ID_PROFESOR = new SelectList(db.PROFESOR, "ID_PROFESOR", "NOMBRE_PROFESOR");
+                ViewBag.ID_SECCION = new SelectList(db.SECCION, "ID_SECCION", "NOMBRE_SECCION");
+                return View(sECCION_MATERIA);
 
             }
             return retorno;
