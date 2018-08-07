@@ -11,6 +11,7 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class ESTUDIANTE
     {
@@ -21,14 +22,30 @@ namespace SistemaMatriculacion.Models
             this.SECCION = new HashSet<SECCION>();
             this.TUTOR = new HashSet<TUTOR>();
         }
-    
+
         public int ID_ESTUDIANTE { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [StringLength(20, ErrorMessage = "Este campo no puede tener mas de 20 caracteres")]
+        [Display(Name = "Nombre")]
         public string NOMBRE_ESTUDIANTE { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [StringLength(20, ErrorMessage = "Este campo no puede tener mas de 20 caracteres")]
+        [Display(Name = "Apellido")]
         public string APELLIDO_ESTUDIANTE { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Display(Name = "Fecha de nacimiento")]
         public System.DateTime FECHA_NACIMIENTO_ESTUDIANTE { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Display(Name = "Sexo")]
         public string SEXO_ESTUDIANTE { get; set; }
+
+        [Display(Name = "Direccion")]
         public string DIRECCION_ESTUDIANTE { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NOTA> NOTA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
