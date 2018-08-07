@@ -353,7 +353,35 @@ VALUES
 
 			SELECT * FROM dbo.ESTUDIANTE_TUTOR
 
+			GO
 
+			CREATE TRIGGER TRG_LIMITAR_ESTUDIANTE
+				ON dbo.SECCION
+				FOR INSERT
+				AS
+				DECLARE @cantidad_estudiante int 
+				
+				SELECT @cantidad_estudiante = dbo.SECCION.CANTIDAD_ESTUDIANTES FROM dbo.SECCION INNER JOIN Inserted
+				on dbo.SECCION.ID_SECCION = Inserted.ID_SECCION
 
+				IF @cantidad_estudiante > 30
+				BEGIN
+				RAISERROR('Una sección no puede tener más de 30 estudiantes.', 14, 1 )
+				ROLLBACK TRANSACTION
+				END
 
+				GO
 
+				INSERT INTO dbo.SECCION
+				(
+				    ID_SECCION,
+				    NOMBRE_SECCION,
+				    CANTIDAD_ESTUDIANTES
+				    
+				)
+				VALUES
+				(   4,  -- ID_SECCION - int
+				    '4A', -- NOMBRE_SECCION - varchar(10)
+				    32 -- CANTIDAD_ESTUDIANTES - int
+				    
+				    )
