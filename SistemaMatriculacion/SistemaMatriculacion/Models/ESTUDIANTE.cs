@@ -11,6 +11,7 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class ESTUDIANTE
     {
@@ -21,12 +22,27 @@ namespace SistemaMatriculacion.Models
             this.SECCION = new HashSet<SECCION>();
             this.TUTOR = new HashSet<TUTOR>();
         }
-    
-        public int ID_ESTUDIANTE { get; set; }
+
+        [Display(Name ="Matricula")]
+        public string MATRICULA { get; set; }
+
+        [Display(Name = "Nombre"), StringLength(20)]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string NOMBRE_ESTUDIANTE { get; set; }
+
+        [Display(Name = "Apellido"), StringLength(20)]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string APELLIDO_ESTUDIANTE { get; set; }
+
+        [Display(Name = "Fecha de Nacimiento")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public System.DateTime FECHA_NACIMIENTO_ESTUDIANTE { get; set; }
+
+        [Display(Name = "Sexo")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string SEXO_ESTUDIANTE { get; set; }
+
+        [Display(Name = "Direccion"), StringLength(200)]
         public string DIRECCION_ESTUDIANTE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

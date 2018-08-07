@@ -12,7 +12,7 @@ namespace SistemaMatriculacion.Controllers
 {
     public class ESTUDIANTEController : Controller
     {
-        private Sistema_matriculacionEntities1 db = new Sistema_matriculacionEntities1();
+        private Sistema_matriculacionEntities2 db = new Sistema_matriculacionEntities2();
 
         // GET: ESTUDIANTE
         public ActionResult Index()
@@ -20,8 +20,9 @@ namespace SistemaMatriculacion.Controllers
             return View(db.ESTUDIANTE.ToList());
         }
 
+        [Authorize(Roles = "estudiante")]
         // GET: ESTUDIANTE/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -46,7 +47,7 @@ namespace SistemaMatriculacion.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_ESTUDIANTE,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
+        public ActionResult Create([Bind(Include = "MATRICULA,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +60,7 @@ namespace SistemaMatriculacion.Controllers
         }
 
         // GET: ESTUDIANTE/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -78,7 +79,7 @@ namespace SistemaMatriculacion.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_ESTUDIANTE,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
+        public ActionResult Edit([Bind(Include = "MATRICULA,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +91,7 @@ namespace SistemaMatriculacion.Controllers
         }
 
         // GET: ESTUDIANTE/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -107,7 +108,7 @@ namespace SistemaMatriculacion.Controllers
         // POST: ESTUDIANTE/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             ESTUDIANTE eSTUDIANTE = db.ESTUDIANTE.Find(id);
             db.ESTUDIANTE.Remove(eSTUDIANTE);

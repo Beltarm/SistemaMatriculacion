@@ -199,55 +199,53 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MATERIAController.cs" />
     <Compile Include="Controllers\PROFESORController.cs" />
-    <Compile Include="Controllers\SECCIONController.cs" />
-    <Compile Include="Controllers\SECCION_MATERIAController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ESTUDIANTE.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ESTUDIO.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MATERIA.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Modelos.Context.cs">
+    <Compile Include="Models\ModelPrueba.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelos.Context.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Modelos.cs">
+    <Compile Include="Models\ModelPrueba.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Modelos.Designer.cs">
+    <Compile Include="Models\ModelPrueba.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelos.edmx</DependentUpon>
+      <DependentUpon>ModelPrueba.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\NOTA.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PROFESOR.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SECCION.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SECCION_MATERIA.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TUTOR.cs">
-      <DependentUpon>Modelos.tt</DependentUpon>
+      <DependentUpon>ModelPrueba.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -269,15 +267,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Models\Modelos.Context.tt">
+    <Content Include="Models\ModelPrueba.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelos.edmx</DependentUpon>
-      <LastGenOutput>Modelos.Context.cs</LastGenOutput>
+      <DependentUpon>ModelPrueba.edmx</DependentUpon>
+      <LastGenOutput>ModelPrueba.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Modelos.tt">
+    <Content Include="Models\ModelPrueba.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelos.edmx</DependentUpon>
-      <LastGenOutput>Modelos.cs</LastGenOutput>
+      <DependentUpon>ModelPrueba.edmx</DependentUpon>
+      <LastGenOutput>ModelPrueba.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -336,12 +334,12 @@
     <Content Include="Content\font-awesome\scss\_screen-reader.scss" />
     <Content Include="Content\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\font-awesome\scss\_variables.scss" />
-    <EntityDeploy Include="Models\Modelos.edmx">
+    <EntityDeploy Include="Models\ModelPrueba.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelos.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelPrueba.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Modelos.edmx.diagram">
-      <DependentUpon>Modelos.edmx</DependentUpon>
+    <Content Include="Models\ModelPrueba.edmx.diagram">
+      <DependentUpon>ModelPrueba.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -412,6 +410,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\MATERIA\Create.cshtml" />
+    <Content Include="Views\MATERIA\Delete.cshtml" />
+    <Content Include="Views\MATERIA\Details.cshtml" />
+    <Content Include="Views\MATERIA\Edit.cshtml" />
+    <Content Include="Views\MATERIA\Index.cshtml" />
     <Content Include="Views\ESTUDIANTE\Create.cshtml" />
     <Content Include="Views\ESTUDIANTE\Delete.cshtml" />
     <Content Include="Views\ESTUDIANTE\Details.cshtml" />
@@ -422,21 +425,6 @@
     <Content Include="Views\PROFESOR\Details.cshtml" />
     <Content Include="Views\PROFESOR\Edit.cshtml" />
     <Content Include="Views\PROFESOR\Index.cshtml" />
-    <Content Include="Views\MATERIA\Create.cshtml" />
-    <Content Include="Views\MATERIA\Delete.cshtml" />
-    <Content Include="Views\MATERIA\Details.cshtml" />
-    <Content Include="Views\MATERIA\Edit.cshtml" />
-    <Content Include="Views\MATERIA\Index.cshtml" />
-    <Content Include="Views\SECCION\Create.cshtml" />
-    <Content Include="Views\SECCION\Delete.cshtml" />
-    <Content Include="Views\SECCION\Details.cshtml" />
-    <Content Include="Views\SECCION\Edit.cshtml" />
-    <Content Include="Views\SECCION\Index.cshtml" />
-    <Content Include="Views\SECCION_MATERIA\Create.cshtml" />
-    <Content Include="Views\SECCION_MATERIA\Delete.cshtml" />
-    <Content Include="Views\SECCION_MATERIA\Details.cshtml" />
-    <Content Include="Views\SECCION_MATERIA\Edit.cshtml" />
-    <Content Include="Views\SECCION_MATERIA\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
