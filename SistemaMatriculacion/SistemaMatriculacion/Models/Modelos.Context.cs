@@ -13,10 +13,10 @@ namespace SistemaMatriculacion.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Sistema_matriculacionEntities2 : DbContext
+    public partial class Sistema_matriculacionEntities : DbContext
     {
-        public Sistema_matriculacionEntities2()
-            : base("name=Sistema_matriculacionEntities2")
+        public Sistema_matriculacionEntities()
+            : base("name=Sistema_matriculacionEntities")
         {
         }
     

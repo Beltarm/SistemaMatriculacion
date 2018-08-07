@@ -14,7 +14,7 @@ namespace SistemaMatriculacion.Models
     
     public partial class NOTA
     {
-        public string MATRICULA { get; set; }
+        public int ID_ESTUDIANTE { get; set; }
         public int ID_MATERIA { get; set; }
         public Nullable<int> CALIFICACION { get; set; }
     
