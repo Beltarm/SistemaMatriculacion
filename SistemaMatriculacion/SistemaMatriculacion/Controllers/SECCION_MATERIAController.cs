@@ -12,7 +12,7 @@ namespace SistemaMatriculacion.Controllers
 {
     public class SECCION_MATERIAController : Controller
     {
-        private Sistema_matriculacionEntities db = new Sistema_matriculacionEntities();
+        private Sistema_matriculacionEntities2 db = new Sistema_matriculacionEntities2();
 
         // GET: SECCION_MATERIA
         public ActionResult Index()

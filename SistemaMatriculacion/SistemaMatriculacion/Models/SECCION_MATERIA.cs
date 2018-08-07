@@ -11,14 +11,24 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class SECCION_MATERIA
     {
+        //public int ID_SECCION { get; set; }
+        //public int ID_MATERIA { get; set; }
+        //public int ID_PROFESOR { get; set; }
+        //public string HORARIO { get; set; }
+
+        [Display(Name = "Seccion")]
         public int ID_SECCION { get; set; }
+        [Display(Name = "Materia")]
         public int ID_MATERIA { get; set; }
+        [Display(Name = "Profesor")]
         public int ID_PROFESOR { get; set; }
+        [Display(Name = "Horario")]
         public string HORARIO { get; set; }
-    
+
         public virtual MATERIA MATERIA { get; set; }
         public virtual PROFESOR PROFESOR { get; set; }
         public virtual SECCION SECCION { get; set; }
