@@ -199,6 +199,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MATERIAController.cs" />
     <Compile Include="Controllers\PROFESORController.cs" />
+    <Compile Include="Controllers\SECCIONController.cs" />
     <Compile Include="Controllers\SECCION_MATERIAController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -432,6 +433,11 @@
     <Content Include="Views\SECCION_MATERIA\Edit.cshtml" />
     <Content Include="Views\SECCION_MATERIA\Error.cshtml" />
     <Content Include="Views\SECCION_MATERIA\Index.cshtml" />
+    <Content Include="Views\SECCION\Create.cshtml" />
+    <Content Include="Views\SECCION\Delete.cshtml" />
+    <Content Include="Views\SECCION\Details.cshtml" />
+    <Content Include="Views\SECCION\Edit.cshtml" />
+    <Content Include="Views\SECCION\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
