@@ -1,13 +1,13 @@
 ﻿@model SistemaMatriculacion.Models.SECCION_MATERIA
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Horarios";
 }
 
-<h2>Details</h2>
+<h2>Horarios</h2>
 
 <div>
-    <h4>SECCION_MATERIA</h4>
+    <h4>Horarios</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new {id1=Model.ID_SECCION,id2=Model.ID_MATERIA}) |
     @Html.ActionLink("Back to List", "Index")
 </p>
