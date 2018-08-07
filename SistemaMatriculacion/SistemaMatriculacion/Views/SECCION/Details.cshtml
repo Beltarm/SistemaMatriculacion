@@ -1,0 +1,42 @@
+﻿@model SistemaMatriculacion.Models.SECCION
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SECCION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_SECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_SECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CANTIDAD_ESTUDIANTES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANTIDAD_ESTUDIANTES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORARIO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_SECCION }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

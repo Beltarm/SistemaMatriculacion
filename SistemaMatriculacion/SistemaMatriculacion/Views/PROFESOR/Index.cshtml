@@ -49,7 +49,7 @@
 </header>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear maestro", "Create")
 </p>
 <table class="table">
     <tr>
@@ -96,9 +96,9 @@
                 @Html.DisplayFor(modelItem => item.TELEFONO_PROFESOR)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID_PROFESOR }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID_PROFESOR }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID_PROFESOR })
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID_PROFESOR }) |
+                @Html.ActionLink("Detalle", "Details", new { id = item.ID_PROFESOR }) |
+                @Html.ActionLink("Borrar", "Delete", new { id = item.ID_PROFESOR })
             </td>
         </tr>
     }
