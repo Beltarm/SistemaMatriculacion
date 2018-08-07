@@ -10,107 +10,107 @@ using SistemaMatriculacion.Models;
 
 namespace SistemaMatriculacion.Controllers
 {
-    public class ESTUDIANTEController : Controller
+    public class SECCIONController : Controller
     {
         private Sistema_matriculacionEntities1 db = new Sistema_matriculacionEntities1();
 
-        // GET: ESTUDIANTE
+        // GET: SECCION
         public ActionResult Index()
         {
-            return View(db.ESTUDIANTE.ToList());
+            return View(db.SECCION.ToList());
         }
 
-        // GET: ESTUDIANTE/Details/5
+        // GET: SECCION/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ESTUDIANTE eSTUDIANTE = db.ESTUDIANTE.Find(id);
-            if (eSTUDIANTE == null)
+            SECCION sECCION = db.SECCION.Find(id);
+            if (sECCION == null)
             {
                 return HttpNotFound();
             }
-            return View(eSTUDIANTE);
+            return View(sECCION);
         }
 
-        // GET: ESTUDIANTE/Create
+        // GET: SECCION/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ESTUDIANTE/Create
+        // POST: SECCION/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_ESTUDIANTE,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
+        public ActionResult Create([Bind(Include = "ID_SECCION,NOMBRE_SECCION,CANTIDAD_ESTUDIANTES,HORARIO")] SECCION sECCION)
         {
             if (ModelState.IsValid)
             {
-                db.ESTUDIANTE.Add(eSTUDIANTE);
+                db.SECCION.Add(sECCION);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(eSTUDIANTE);
+            return View(sECCION);
         }
 
-        // GET: ESTUDIANTE/Edit/5
+        // GET: SECCION/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ESTUDIANTE eSTUDIANTE = db.ESTUDIANTE.Find(id);
-            if (eSTUDIANTE == null)
+            SECCION sECCION = db.SECCION.Find(id);
+            if (sECCION == null)
             {
                 return HttpNotFound();
             }
-            return View(eSTUDIANTE);
+            return View(sECCION);
         }
 
-        // POST: ESTUDIANTE/Edit/5
+        // POST: SECCION/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_ESTUDIANTE,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
+        public ActionResult Edit([Bind(Include = "ID_SECCION,NOMBRE_SECCION,CANTIDAD_ESTUDIANTES,HORARIO")] SECCION sECCION)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(eSTUDIANTE).State = EntityState.Modified;
+                db.Entry(sECCION).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(eSTUDIANTE);
+            return View(sECCION);
         }
 
-        // GET: ESTUDIANTE/Delete/5
+        // GET: SECCION/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ESTUDIANTE eSTUDIANTE = db.ESTUDIANTE.Find(id);
-            if (eSTUDIANTE == null)
+            SECCION sECCION = db.SECCION.Find(id);
+            if (sECCION == null)
             {
                 return HttpNotFound();
             }
-            return View(eSTUDIANTE);
+            return View(sECCION);
         }
 
-        // POST: ESTUDIANTE/Delete/5
+        // POST: SECCION/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ESTUDIANTE eSTUDIANTE = db.ESTUDIANTE.Find(id);
-            db.ESTUDIANTE.Remove(eSTUDIANTE);
+            SECCION sECCION = db.SECCION.Find(id);
+            db.SECCION.Remove(sECCION);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

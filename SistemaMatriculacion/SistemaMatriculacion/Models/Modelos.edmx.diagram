@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="62f1038423c54472b7c291cd99cd2cbe" Name="Diagram1" ZoomLevel="77">
-        <EntityTypeShape EntityType="Model.ESTUDIANTE" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+      <Diagram DiagramId="02141d8064f345dc8f6519e14561fd4f" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.ESTUDIANTE" Width="1.5" PointX="1.5" PointY="14.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.ESTUDIO" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.MATERIA" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.NOTA" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.PROFESOR" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SECCION" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SECCION" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.SECCION_MATERIA" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.TUTOR" Width="1.5" PointX="1.5" PointY="18.75" IsExpanded="true" />
-        <AssociationConnector Association="Model.FK__NOTA__MATRICULA__5FB337D6" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK__ESTUDIO__ID_PROF__5EBF139D" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK__NOTA__ID_MATERIA__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK__SECCION_M__ID_MA__628FA481" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK__SECCION_M__ID_PR__6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK__SECCION_M__ID_SE__619B8048" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.TUTOR" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__NOTA__ID_ESTUDIA__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__ESTUDIO__ID_PROF__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__NOTA__ID_MATERIA__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__SECCION_M__ID_MA__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__SECCION_M__ID_PR__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__SECCION_M__ID_SE__1BC821DD" ManuallyRouted="false" />
         <AssociationConnector Association="Model.ESTUDIANTE_SECCION" ManuallyRouted="false" />
         <AssociationConnector Association="Model.ESTUDIANTE_TUTOR" ManuallyRouted="false" />
       </Diagram>
