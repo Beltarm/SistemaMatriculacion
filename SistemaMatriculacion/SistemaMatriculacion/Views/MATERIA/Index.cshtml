@@ -49,7 +49,10 @@
     </div>
 </header>
 <p>
-    @Html.ActionLink("Create New", "Create")
+  
+    <a class="btn btn-link active">
+        @Html.ActionLink("Crear nueva materia", "Create", null, new { @class = "boton create" })
+    </a>
 </p>
 <table class="table">
     <tr>
@@ -65,9 +68,9 @@
                 @Html.DisplayFor(modelItem => item.NOMBRE_MATERIA)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID_MATERIA }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID_MATERIA }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID_MATERIA })
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID_MATERIA }, new { @class = "boton" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID_MATERIA }, new { @class = "boton" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_MATERIA }, new { @class = "boton" })
             </td>
         </tr>
     }

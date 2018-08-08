@@ -3,9 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-@section styles{
-    <link href="~/Estilos externos/main.css" rel="stylesheet" type="text/css" />
-}
+
 
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -54,11 +52,13 @@
         </div>
     </div>
 </header>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p
+<p >
+    <a class="btn btn-link active">
+    @Html.ActionLink("Crear nuevo profesor", "Create",null, new {@class = "boton create" }) </a>
+
+</p>
 <table class="table">
-    <tr>
+    <tr class="text-secondary">
         <th>
             @Html.DisplayNameFor(model => model.NOMBRE_PROFESOR)
         </th>
@@ -101,9 +101,9 @@
                 @Html.DisplayFor(modelItem => item.TELEFONO_PROFESOR)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID_PROFESOR }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID_PROFESOR }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID_PROFESOR })
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID_PROFESOR} , new { @class = "boton" }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.ID_PROFESOR }, new { @class = "boton" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_PROFESOR }, new { @class = "boton" })
             </td>
         </tr>
     }

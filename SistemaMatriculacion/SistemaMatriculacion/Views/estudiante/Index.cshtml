@@ -53,7 +53,9 @@
 
 <div class="container">
     <p>
-        @Html.ActionLink("Crear nuevo estudiante", "Create")
+        <a class="btn btn-link active">
+            @Html.ActionLink("Crear nuevo estudiante", "Create", null, new { @class = "boton create" })
+        </a>
     </p>
 
     <table class="table">
@@ -94,9 +96,9 @@
                     @Html.DisplayFor(modelItem => item.DIRECCION_ESTUDIANTE)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.ID_ESTUDIANTE }) |
-                    @Html.ActionLink("Detalles", "Details", new { id = item.ID_ESTUDIANTE }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_ESTUDIANTE })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ID_ESTUDIANTE }, new { @class = "boton" }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.ID_ESTUDIANTE }, new { @class = "boton" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_ESTUDIANTE }, new { @class = "boton" })
                 </td>
             </tr>
         }

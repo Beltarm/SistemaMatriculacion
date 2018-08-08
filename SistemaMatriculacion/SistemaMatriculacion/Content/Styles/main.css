@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.boton{
+    text-decoration:none;
+   
+    
+}
+.create {
+    border: #B8B8B8 solid 3px;
+    padding: 15px;
+    transition: ease .5s;
+    border-radius: 10px;
+}
+
+    .boton:hover {
+        text-decoration: none;
+        
+       
+    }
+
+.create:hover {
+    background-color: #B8B8B8;
+    color: black;
+}
