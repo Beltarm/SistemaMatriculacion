@@ -1,0 +1,2 @@
+create View VerNotas as 
+Select Estudiante.NOMBRE_ESTUDIANTE , nota.ID_MATERIA , nota.CALIFICACION  from nota inner join ESTUDIANTE on nota.ID_ESTUDIANTE = ESTUDIANTE.ID_ESTUDIANTE 
