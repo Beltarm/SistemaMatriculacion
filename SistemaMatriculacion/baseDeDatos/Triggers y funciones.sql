@@ -385,3 +385,7 @@ VALUES
 				    32 -- CANTIDAD_ESTUDIANTES - int
 				    
 				    )
+				    
+create view Nota_Sobresaliente
+  as
+select NOTA.ID_ESTUDIANTE AS id, NOMBRE_ESTUDIANTE as estudiante ,NOTA.CALIFICACION as sobresaliente from NOTA inner join ESTUDIANTE on NOTA.ID_ESTUDIANTE = ESTUDIANTE.ID_ESTUDIANTE and CALIFICACION > 90
