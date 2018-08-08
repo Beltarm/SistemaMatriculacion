@@ -20,6 +20,11 @@ namespace SistemaMatriculacion.Controllers
             return View(db.ESTUDIANTE.ToList());
         }
 
+        public ActionResult dashboard()
+        {
+            return View();
+        }
+
         // GET: ESTUDIANTE/Details/5
         public ActionResult Details(int? id)
         {
