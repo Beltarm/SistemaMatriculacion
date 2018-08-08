@@ -77,21 +77,18 @@ namespace SistemaMatriculacion.Controllers
             // Para permitir que los errores de contraseña desencadenen el bloqueo de la cuenta, cambie a shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             
-
-
-            /*if(model.Email == "cuentaadministrador@gmail.com")
+            if(model.Email == "cuentaestudiante@gmail.com")
+            {
+                RedirectToAction("dashboard", "estudiante");
+            }else if(model.Email == "cuentaadministrador@gmail.com")
             {
                 RedirectToAction("dashboardAdmin", "Home");
             }
-            else if(model.Email == "cuentaadministrador@gmail.com")
-            {
-                RedirectToAction("dashboardAdmin", "Home");
-            }*/
 
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("logueado", "Home");
+                    return RedirectToAction("Index", "Home");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

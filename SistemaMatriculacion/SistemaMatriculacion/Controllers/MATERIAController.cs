@@ -10,7 +10,6 @@ using SistemaMatriculacion.Models;
 
 namespace SistemaMatriculacion.Controllers
 {
-    [Authorize(Roles = "admin")]
     public class MATERIAController : Controller
     {
         private Sistema_matriculacionEntities db = new Sistema_matriculacionEntities();

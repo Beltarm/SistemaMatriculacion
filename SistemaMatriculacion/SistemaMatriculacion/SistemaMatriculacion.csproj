@@ -198,7 +198,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MATERIAController.cs" />
-    <Compile Include="Controllers\NOTAController.cs" />
     <Compile Include="Controllers\PROFESORController.cs" />
     <Compile Include="Controllers\SECCIONController.cs" />
     <Compile Include="Controllers\SECCION_MATERIAController.cs" />
@@ -441,11 +440,6 @@
     <Content Include="Views\SECCION_MATERIA\Index.cshtml" />
     <Content Include="Views\ESTUDIANTE\dashboard.cshtml" />
     <Content Include="Views\Home\dashboardAdmin.cshtml" />
-    <Content Include="Views\NOTA\Create.cshtml" />
-    <Content Include="Views\NOTA\Delete.cshtml" />
-    <Content Include="Views\NOTA\Details.cshtml" />
-    <Content Include="Views\NOTA\Edit.cshtml" />
-    <Content Include="Views\NOTA\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
