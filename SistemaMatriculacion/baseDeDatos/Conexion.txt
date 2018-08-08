@@ -1,0 +1,1 @@
+<add name="DefaultConnection" connectionString="Data Source=LAB-E29;Initial Catalog=Sistema matriculacion;Integrated Security=True" providerName="System.Data.SqlClient" />
