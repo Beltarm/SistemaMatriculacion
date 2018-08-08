@@ -37,6 +37,7 @@ namespace SistemaMatriculacion.Models
 
         [Required(ErrorMessage = "Este campo es obligatorio")]
         [Display(Name = "Fecha de nacimiento")]
+        [DataType(DataType.Date)]
         public System.DateTime FECHA_NACIMIENTO_ESTUDIANTE { get; set; }
 
         [Required(ErrorMessage = "Este campo es obligatorio")]
