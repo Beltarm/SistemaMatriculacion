@@ -439,6 +439,7 @@
     <Content Include="Views\SECCION_MATERIA\Index.cshtml" />
     <Content Include="Views\ESTUDIANTE\dashboard.cshtml" />
     <Content Include="Views\Home\dashboardAdmin.cshtml" />
+    <Content Include="Views\Home\dashboarAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
