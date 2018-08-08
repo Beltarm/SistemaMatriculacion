@@ -1,2 +1,0 @@
-create view EdadEstudiante As
-select Nombre_Estudiante, DATEDIFF(year,year(getdate()), FECHA_NACIMIENTO_ESTUDIANTE) as Edad from ESTUDIANTE ;
