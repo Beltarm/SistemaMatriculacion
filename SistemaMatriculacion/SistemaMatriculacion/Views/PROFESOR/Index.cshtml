@@ -52,62 +52,67 @@
         </div>
     </div>
 </header>
-<p >
-    <a class="btn btn-link active">
-    @Html.ActionLink("Crear nuevo profesor", "Create",null, new {@class = "boton create" }) </a>
 
-</p>
-<table class="table">
-    <tr class="text-secondary">
-        <th>
-            @Html.DisplayNameFor(model => model.NOMBRE_PROFESOR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.APELLIDO_PROFESOR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO_PROFESOR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SEXO_PROFESOR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DIRECCION_PROFESOR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TELEFONO_PROFESOR)
-        </th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NOMBRE_PROFESOR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.APELLIDO_PROFESOR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO_PROFESOR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SEXO_PROFESOR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DIRECCION_PROFESOR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TELEFONO_PROFESOR)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.ID_PROFESOR} , new { @class = "boton" }) |
-                @Html.ActionLink("Detalles", "Details", new { id = item.ID_PROFESOR }, new { @class = "boton" }) |
-                @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_PROFESOR }, new { @class = "boton" })
-            </td>
+<div class=" container">
+    <p>
+        <a class="btn btn-link active">
+            @Html.ActionLink("Crear nuevo profesor", "Create", null, new { @class = "boton create" })
+        </a>
+
+    </p>
+    <table class="table">
+        <tr class="thead-light">
+            <th>
+                @Html.DisplayNameFor(model => model.NOMBRE_PROFESOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.APELLIDO_PROFESOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO_PROFESOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SEXO_PROFESOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DIRECCION_PROFESOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TELEFONO_PROFESOR)
+            </th>
+            <th></th>
         </tr>
-    }
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE_PROFESOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.APELLIDO_PROFESOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO_PROFESOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SEXO_PROFESOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DIRECCION_PROFESOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TELEFONO_PROFESOR)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ID_PROFESOR }, new { @class = "boton" }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.ID_PROFESOR }, new { @class = "boton" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_PROFESOR }, new { @class = "boton" })
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
 
 <footer>
     <div class="container">
