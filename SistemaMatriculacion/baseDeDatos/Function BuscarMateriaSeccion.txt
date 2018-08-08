@@ -1,0 +1,10 @@
+CREATE FUNCTION dbo.BuscarMateriaSeccion (@IdSeccion int)
+  RETURNS varchar(50)
+AS BEGIN
+     DECLARE @Materia varchar(255) 
+        select @Materia = materia.NOMBRE_MATERIA  from SECCION_MATERIA inner join materia on SECCION_MATERIA .ID_MATERIA = materia.ID_MATERIA  where SECCION_MATERIA.ID_SECCION = @IdSeccion 
+
+
+    RETURN @Materia
+END
+
