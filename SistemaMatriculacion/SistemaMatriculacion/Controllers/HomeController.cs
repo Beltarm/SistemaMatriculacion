@@ -18,5 +18,19 @@ namespace SistemaMatriculacion.Controllers
         {
             return View();
         }
+
+        public ActionResult logueado()
+        {
+            if (User.IsInRole("admin"))
+            {
+                return RedirectToAction("dashboardAdmin", "Home");
+            }
+            else if (User.IsInRole("user"))
+            {
+                return RedirectToAction("dashboard", "estudiante");
+            }
+
+            return View("Index");
+        }
     }
 }
