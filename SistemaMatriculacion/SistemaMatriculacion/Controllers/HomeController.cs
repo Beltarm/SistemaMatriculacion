@@ -14,7 +14,7 @@ namespace SistemaMatriculacion.Controllers
         }
 
 
-        public ActionResult dashboarAdmin()
+        public ActionResult dashboardAdmin()
         {
             return View();
         }

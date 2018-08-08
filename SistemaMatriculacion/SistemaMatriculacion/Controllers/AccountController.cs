@@ -82,13 +82,13 @@ namespace SistemaMatriculacion.Controllers
                 RedirectToAction("dashboard", "estudiante");
             }else if(model.Email == "cuentaadministrador@gmail.com")
             {
-                RedirectToAction("dashboarAdmin", "Home");
+                RedirectToAction("dashboardAdmin", "Home");
             }
 
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("dashboard", "estudiante");
+                    return RedirectToAction("Index", "Home");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
