@@ -1,7 +1,6 @@
 ﻿@{
     ViewBag.Title = "Sistema Matriculacion";
 }
-
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -13,20 +12,17 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    @Html.ActionLink("Home", "Index", "Home")
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Logearse.html">Logearse</a>
+                    @Html.ActionLink("Logearse", "Login", "Account")
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">sobre nosotros</a>
+                    @Html.ActionLink("Sobre nosotros", "About", "Home")
                 </li>
-                <!--<li class="nav-item">
-                  <a class="nav-link" href="cursos.html">Cursos</a>
-                </li>
-                 <li class="nav-item">
-                  <a class="nav-link" href="Materia.html">Materia</a>
-                </li>-->
+
+
+
             </ul>
         </div>
     </div>
@@ -39,22 +35,20 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1>Matriculacion de estudiantes</h1>
-                    <span class="subheading">El estudio, lo peor</span>
+                    <h1>Matriculacion de estudiantes.</h1>
+
                 </div>
             </div>
         </div>
     </div>
 </header>
-
 <!-- Main Content -->
 <h2>Grupo</h2>
 <h3>Brian Correa</h3>
 <h3>Alexander Batista</h3>
 <h3>Daniel López</h3>
-<h3>El singa su madre</h3>
-
-           
+<h3>Luis Laureano</h3>
+<h3>Jesús Natera</h3>
 
 <!-- Footer -->
 <footer>

@@ -1,22 +1,63 @@
 ﻿@model SistemaMatriculacion.Models.ESTUDIANTE
-
 @{
     ViewBag.Title = "Edit";
 }
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Profesores", "Index", "PROFESOR")
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Estudiantes", "Index", "ESTUDIANTE")
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Materias", "Index", "MATERIA")
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Horarios", "Index", "SECCION_MATERIA")
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Secciones", "Index", "SECCION")
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<h2>Edit</h2>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../../Images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Editar estudiantes.</h1>
 
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>ESTUDIANTE</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.ID_ESTUDIANTE)
-
         <div class="form-group">
             @Html.LabelFor(model => model.NOMBRE_ESTUDIANTE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -24,7 +65,6 @@
                 @Html.ValidationMessageFor(model => model.NOMBRE_ESTUDIANTE, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.APELLIDO_ESTUDIANTE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -32,7 +72,6 @@
                 @Html.ValidationMessageFor(model => model.APELLIDO_ESTUDIANTE, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.FECHA_NACIMIENTO_ESTUDIANTE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -40,7 +79,6 @@
                 @Html.ValidationMessageFor(model => model.FECHA_NACIMIENTO_ESTUDIANTE, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.SEXO_ESTUDIANTE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -52,7 +90,6 @@
                 </label>
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.DIRECCION_ESTUDIANTE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -60,7 +97,6 @@
                 @Html.ValidationMessageFor(model => model.DIRECCION_ESTUDIANTE, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -68,11 +104,45 @@
         </div>
     </div>
 }
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
+            </div>
+        </div>
+    </div>
+</footer>
