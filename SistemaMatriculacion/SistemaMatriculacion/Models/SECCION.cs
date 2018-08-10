@@ -11,6 +11,7 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class SECCION
     {
@@ -20,11 +21,16 @@ namespace SistemaMatriculacion.Models
             this.SECCION_MATERIA = new HashSet<SECCION_MATERIA>();
             this.ESTUDIANTE = new HashSet<ESTUDIANTE>();
         }
-    
+
         public int ID_SECCION { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Display(Name = "Nombre")]
         public string NOMBRE_SECCION { get; set; }
+
+        [Display(Name = "Cantidad de estudiantes")]
         public int CANTIDAD_ESTUDIANTES { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SECCION_MATERIA> SECCION_MATERIA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

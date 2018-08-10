@@ -1,0 +1,8 @@
+CREATE FUNCTION dbo.CantEstudiante (@IdSeccion int)
+  RETURNS int
+AS BEGIN
+     DECLARE @Cantidad int 
+        select @Cantidad =  sum(ESTUDIANTE_SECCION.id_estudiante) from ESTUDIANTE_SECCION where ID_SECCION =  @IdSeccion
+
+    RETURN @Cantidad
+END

@@ -11,6 +11,7 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class TUTOR
     {
@@ -19,12 +20,32 @@ namespace SistemaMatriculacion.Models
         {
             this.ESTUDIANTE = new HashSet<ESTUDIANTE>();
         }
-    
+        
+        [Display(Name = "Cedula")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [StringLength(11, ErrorMessage = "Cedula invalida")]
         public string CEDULA_TUTOR { get; set; }
+
+        [Display(Name = "Nombre")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [StringLength(15, ErrorMessage = "Este campo no puede contener mas de 15 caracteres")]
         public string NOMBRE_TUTOR { get; set; }
+
+        [Display(Name = "Apellido")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [StringLength(15, ErrorMessage = "Este campo no puede contener mas de 15 caracteres")]
         public string APELLIDO_TUTOR { get; set; }
+
+        [Display(Name = "Relacion con el estudiante")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [StringLength(10, ErrorMessage = "Este campo no puede contener mas de 10 caracteres")]
         public string RELACION_ESTUDIANTE { get; set; }
+
+        [Display(Name = "Sexo")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string SEXO_TUTOR { get; set; }
+
+        [StringLength(10, ErrorMessage = "Telefono invalido")]
         public string TELEFONO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

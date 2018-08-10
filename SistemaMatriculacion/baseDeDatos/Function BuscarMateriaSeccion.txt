@@ -1,0 +1,10 @@
+CREATE FUNCTION dbo.BuscarMateriaSeccion1 (@IdSeccion int)
+  RETURNS int
+AS BEGIN
+     DECLARE @cant int
+        select @cant = count(*) from SECCION_MATERIA where ID_SECCION = @IdSeccion
+
+
+    RETURN @cant
+END
+

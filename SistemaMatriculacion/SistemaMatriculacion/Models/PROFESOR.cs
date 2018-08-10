@@ -11,6 +11,7 @@ namespace SistemaMatriculacion.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class PROFESOR
     {
@@ -20,15 +21,35 @@ namespace SistemaMatriculacion.Models
             this.ESTUDIO = new HashSet<ESTUDIO>();
             this.SECCION_MATERIA = new HashSet<SECCION_MATERIA>();
         }
-    
+
         public int ID_PROFESOR { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Display(Name = "Nombre")]
+        [StringLength(20, ErrorMessage = "Este campo no puede contener mas de 20 caracteres")]
         public string NOMBRE_PROFESOR { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Display(Name = "Apellido")]
+        [StringLength(20, ErrorMessage = "Este campo no puede contener mas de 20 caracteres")]
         public string APELLIDO_PROFESOR { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Display(Name = "Fecha de nacimiento")]
+        [DataType(DataType.Date)]
         public System.DateTime FECHA_NACIMIENTO_PROFESOR { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Display(Name = "Sexo")]
         public string SEXO_PROFESOR { get; set; }
+
+        [Display(Name = "Direccion")]
         public string DIRECCION_PROFESOR { get; set; }
+
+        [Display(Name = "Telefono")]
+        [StringLength(11, MinimumLength = 11, ErrorMessage = "Telefono no valido")]
         public string TELEFONO_PROFESOR { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ESTUDIO> ESTUDIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

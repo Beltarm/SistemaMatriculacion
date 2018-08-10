@@ -1,0 +1,10 @@
+CREATE FUNCTION dbo.BuscarMateria (@IdProfesor int, @Horario varchar(50))
+  RETURNS varchar(50)
+AS BEGIN
+     DECLARE @Materia varchar(255) 
+        select @Materia = materia.NOMBRE_MATERIA from SECCION_MATERIA inner join materia on SECCION_MATERIA.ID_MATERIA = MATERIA.ID_MATERIA where SECCION_MATERIa.ID_PROFESOR = @IdProfesor and SECCION_MATERIA.HORARIO = @Horario
+
+
+    RETURN @Materia
+END
+

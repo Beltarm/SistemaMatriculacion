@@ -1,0 +1,58 @@
+
+@{
+    ViewBag.Title = "admin";
+}
+
+<header class="masthead" style="background-image: url('../../Images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Dashboard Admin</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+
+    <div class="row" style="margin-top:30px;">
+
+        <div class="col-md-4" style="border:1px solid black; border-radius:5px 5px 5px 5px;">
+            <h3>Agregar Seccion</h3>
+
+            @Html.ActionLink("Agregar Seccion", "Create","Seccion") 
+
+        </div>
+
+        <div class="col-md-4" style="border:1px solid black; border-radius:5px 5px 5px 5px;">
+            <h3>Agregar Profesor</h3>
+
+            @Html.ActionLink("Agregar Profesor", "Create", "Profesor")
+            
+        </div>
+
+        <div class="col-md-4" style="border:1px solid black; border-radius:5px 5px 5px 5px;">
+            <h3>Agregar Estudiante</h3>
+
+            @Html.ActionLink("Agregar Estudiante", "Create", "Estudiante")
+        </div>
+
+        <div class="col-md-4" style="border:1px solid black; border-radius:5px 5px 5px 5px;">
+            <h3>Agregar Horario</h3>
+
+            @Html.ActionLink("Agregar Horario", "Create", "SECCION_MATERIA")
+        </div>
+
+        <div class="col-md-4" style="border:1px solid black; border-radius:5px 5px 5px 5px;">
+            <h3>Agregar Materia</h3>
+
+            @Html.ActionLink("Agregar Materia", "Create", "Materia")
+        </div>
+
+        </div>
+    </div>
+</div>

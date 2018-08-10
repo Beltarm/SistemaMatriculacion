@@ -1,4 +1,4 @@
-﻿CREATE DATABASE "Sistema_matriculacion"
+CREATE DATABASE "Sistema_matriculacion"
 GO
 
 USE "Sistema_matriculacion"
@@ -81,3 +81,501 @@ ADD CONSTRAINT UC_seccion_materia UNIQUE (HORARIO,ID_SECCION);
 
 ALTER TABLE seccion_materia
 ADD CONSTRAINT UC_seccion_materia2 UNIQUE (HORARIO,ID_PROFESOR);
+
+ALTER TABLE SECCION ADD CONSTRAINT DEFAULT_ESTUDIANTES DEFAULT 0 FOR CANTIDAD_ESTUDIANTES
+
+go
+
+INSERT INTO dbo.ESTUDIANTE
+(
+	NOMBRE_ESTUDIANTE,
+	APELLIDO_ESTUDIANTE,
+	FECHA_NACIMIENTO_ESTUDIANTE,
+	SEXO_ESTUDIANTE,
+	DIRECCION_ESTUDIANTE
+)
+VALUES
+(
+	'Enmanuel',        -- NOMBRE_ESTUDIANTE - varchar(20)
+	'Reyes',        -- APELLIDO_ESTUDIANTE - varchar(20)
+	'2005-05-12', -- FECHA_NACIMIENTO_ESTUDIANTE - date
+	'M',        -- SEXO_ESTUDIANTE - varchar(1)
+	'Los tres brazos'         -- DIRECCION_ESTUDIANTE - varchar(200)
+)
+
+
+INSERT INTO dbo.ESTUDIANTE
+(
+	NOMBRE_ESTUDIANTE,
+	APELLIDO_ESTUDIANTE,
+	FECHA_NACIMIENTO_ESTUDIANTE,
+	SEXO_ESTUDIANTE,
+	DIRECCION_ESTUDIANTE
+)
+VALUES
+(
+	'Esteban',        -- NOMBRE_ESTUDIANTE - varchar(20)
+	'Rodriguez',        -- APELLIDO_ESTUDIANTE - varchar(20)
+	'2003-02-16', -- FECHA_NACIMIENTO_ESTUDIANTE - date
+	'M',        -- SEXO_ESTUDIANTE - varchar(1)
+	'Alma Rosa #56'         -- DIRECCION_ESTUDIANTE - varchar(200)
+)
+
+	
+INSERT INTO dbo.ESTUDIANTE
+(
+	NOMBRE_ESTUDIANTE,
+	APELLIDO_ESTUDIANTE,
+	FECHA_NACIMIENTO_ESTUDIANTE,
+	SEXO_ESTUDIANTE,
+	DIRECCION_ESTUDIANTE
+)
+VALUES
+(
+	'Pamela',        -- NOMBRE_ESTUDIANTE - varchar(20)
+	'Alcántara',        -- APELLIDO_ESTUDIANTE - varchar(20)
+	'2009-07-22', -- FECHA_NACIMIENTO_ESTUDIANTE - date
+	'F',        -- SEXO_ESTUDIANTE - varchar(1)
+	'Las Palmeras #32'         -- DIRECCION_ESTUDIANTE - varchar(200)
+)
+
+
+		
+INSERT INTO dbo.TUTOR
+(
+	CEDULA_TUTOR,
+	NOMBRE_TUTOR,
+	APELLIDO_TUTOR,
+	RELACION_ESTUDIANTE,
+	SEXO_TUTOR,
+	TELEFONO
+)
+VALUES
+(   '00177777777', -- CEDULA_TUTOR - varchar(11)
+	'Madeline', -- NOMBRE_TUTOR - varchar(15)
+	'Pineda', -- APELLIDO_TUTOR - varchar(15)
+	'Madre', -- RELACION_ESTUDIANTE - varchar(10)
+	'F', -- SEXO_TUTOR - varchar(1)
+	'8098954747'  -- TELEFONO - varchar(10)
+)
+
+
+		
+INSERT INTO dbo.TUTOR
+(
+	CEDULA_TUTOR,
+	NOMBRE_TUTOR,
+	APELLIDO_TUTOR,
+	RELACION_ESTUDIANTE,
+	SEXO_TUTOR,
+	TELEFONO
+)
+VALUES
+(   '00188888888', -- CEDULA_TUTOR - varchar(11)
+	'Fernando', -- NOMBRE_TUTOR - varchar(15)
+	'Alcántara', -- APELLIDO_TUTOR - varchar(15)
+	'Padre', -- RELACION_ESTUDIANTE - varchar(10)
+	'M', -- SEXO_TUTOR - varchar(1)
+	'8096522522'  -- TELEFONO - varchar(10)
+)
+		
+INSERT INTO dbo.TUTOR
+(
+	CEDULA_TUTOR,
+	NOMBRE_TUTOR,
+	APELLIDO_TUTOR,
+	RELACION_ESTUDIANTE,
+	SEXO_TUTOR,
+	TELEFONO
+)
+VALUES
+(   '00133355558', -- CEDULA_TUTOR - varchar(11)
+	'Lucia', -- NOMBRE_TUTOR - varchar(15)
+	'Hernández', -- APELLIDO_TUTOR - varchar(15)
+	'Abuela', -- RELACION_ESTUDIANTE - varchar(10)
+	'F', -- SEXO_TUTOR - varchar(1)
+	'8092548787'  -- TELEFONO - varchar(10)
+)
+
+INSERT INTO dbo.PROFESOR
+(
+	NOMBRE_PROFESOR,
+	APELLIDO_PROFESOR,
+	FECHA_NACIMIENTO_PROFESOR,
+	SEXO_PROFESOR,
+	DIRECCION_PROFESOR,
+	TELEFONO_PROFESOR
+)
+VALUES
+(
+	'Casimiro',        -- NOMBRE_PROFESOR - varchar(20)
+	'Peña ',        -- APELLIDO_PROFESOR - varchar(20)
+	'1980-04-25', -- FECHA_NACIMIENTO_PROFESOR - date
+	'M',        -- SEXO_PROFESOR - varchar(1)
+	'Villa Mella #43',        -- DIRECCION_PROFESOR - varchar(200)
+	'8292541745'         -- TELEFONO_PROFESOR - varchar(11)
+)
+
+INSERT INTO dbo.PROFESOR
+(
+	NOMBRE_PROFESOR,
+	APELLIDO_PROFESOR,
+	FECHA_NACIMIENTO_PROFESOR,
+	SEXO_PROFESOR,
+	DIRECCION_PROFESOR,
+	TELEFONO_PROFESOR
+)
+VALUES
+(
+	'Susana',        -- NOMBRE_PROFESOR - varchar(20)
+	'Mejía ',        -- APELLIDO_PROFESOR - varchar(20)
+	'1975-07-06', -- FECHA_NACIMIENTO_PROFESOR - date
+	'F',        -- SEXO_PROFESOR - varchar(1)
+	'Cancino #24',        -- DIRECCION_PROFESOR - varchar(200)
+	'8095556565'         -- TELEFONO_PROFESOR - varchar(11)
+)
+
+INSERT INTO dbo.MATERIA
+(
+	ID_MATERIA,
+	NOMBRE_MATERIA
+)
+VALUES
+(   1, -- ID_MATERIA - int
+	'Matemáticas' -- NOMBRE_MATERIA - varchar(20)
+)
+
+INSERT INTO dbo.MATERIA
+(
+	ID_MATERIA,
+	NOMBRE_MATERIA
+)
+VALUES
+(  
+	2, -- ID_MATERIA - int
+	'Física' -- NOMBRE_MATERIA - varchar(20)
+)
+
+INSERT INTO dbo.MATERIA
+(
+	ID_MATERIA,
+	NOMBRE_MATERIA
+)
+VALUES
+(   
+	3, -- ID_MATERIA - int
+	'Historia' -- NOMBRE_MATERIA - varchar(20)
+)
+
+INSERT INTO dbo.ESTUDIANTE_TUTOR
+(
+	ID_ESTUDIANTE,
+	CEDULA_TUTOR
+)
+VALUES
+(   
+	'1', -- ID_ESTUDIANTE - varchar(8)
+	'00133355558'  -- CEDULA_TUTOR - varchar(11)
+)
+
+INSERT INTO dbo.ESTUDIANTE_TUTOR
+(
+	ID_ESTUDIANTE,
+	CEDULA_TUTOR
+)
+VALUES
+(   
+	'2', -- ID_ESTUDIANTE - varchar(8)
+	'00188888888'  -- CEDULA_TUTOR - varchar(11)
+)
+
+				
+INSERT INTO dbo.ESTUDIANTE_TUTOR
+(
+	ID_ESTUDIANTE,
+	CEDULA_TUTOR
+)
+VALUES
+(   
+	'3', -- ID_ESTUDIANTE - varchar(8)
+	'00177777777'  -- CEDULA_TUTOR - varchar(11)
+)
+
+INSERT INTO dbo.SECCION
+(
+	ID_SECCION,
+	NOMBRE_SECCION,
+	CANTIDAD_ESTUDIANTES
+				    
+)
+VALUES
+(   1,  -- ID_SECCION - int
+	'1A', -- NOMBRE_SECCION - varchar(10)
+	35  -- CANTIDAD_ESTUDIANTES - int
+				   
+)
+
+INSERT INTO dbo.SECCION
+(
+	ID_SECCION,
+	NOMBRE_SECCION,
+	CANTIDAD_ESTUDIANTES		    
+)
+VALUES
+(   
+	2,  -- ID_SECCION - int
+	'3D', -- NOMBRE_SECCION - varchar(10)
+	26  -- CANTIDAD_ESTUDIANTES - int
+				   
+)
+
+INSERT INTO dbo.SECCION
+(
+	ID_SECCION,
+	NOMBRE_SECCION,
+	CANTIDAD_ESTUDIANTES				    
+)
+VALUES
+(   
+	3,  -- ID_SECCION - int
+	'4B', -- NOMBRE_SECCION - varchar(10)
+	30  -- CANTIDAD_ESTUDIANTES - int
+				   
+)
+                
+INSERT INTO dbo.ESTUDIANTE_SECCION
+(
+	ID_ESTUDIANTE,
+	ID_SECCION
+)
+VALUES
+(   
+	'1', -- MATRICULA - varchar(8)
+	2  -- ID_SECCION - int
+)
+                
+INSERT INTO dbo.ESTUDIANTE_SECCION
+(
+	ID_ESTUDIANTE,
+	ID_SECCION
+)
+VALUES
+(  
+	 '2', -- MATRICULA - varchar(8)
+	1  -- ID_SECCION - int
+)
+                
+INSERT INTO dbo.ESTUDIANTE_SECCION
+(
+	ID_ESTUDIANTE,
+	ID_SECCION
+)
+VALUES
+(   
+	'3', -- MATRICULA - varchar(8)
+	3  -- ID_SECCION - int
+)
+GO
+
+INSERT INTO dbo.ESTUDIANTE_SECCION
+(
+	ID_ESTUDIANTE,
+	ID_SECCION
+)
+VALUES
+(   
+	'2', -- MATRICULA - varchar(8)
+	2   -- ID_SECCION - int
+)
+
+				
+GO 						 
+
+INSERT INTO dbo.SECCION_MATERIA
+(
+	ID_SECCION,
+	ID_MATERIA,
+	ID_PROFESOR,
+	HORARIO
+)
+VALUES
+(   2, -- ID_SECCION - int
+	2, -- ID_MATERIA - int
+	1, -- ID_PROFESOR - int
+	'11-2PM' -- HORARIO - varchar(50)
+)
+GO
+
+
+INSERT INTO dbo.SECCION_MATERIA
+(
+	ID_SECCION,
+	ID_MATERIA,
+	ID_PROFESOR,
+	HORARIO
+)
+VALUES
+(   2, -- ID_SECCION - int
+	3, -- ID_MATERIA - int
+	1, -- ID_PROFESOR - int
+	'12-2PM' -- HORARIO - varchar(50)
+)
+GO		
+
+INSERT INTO dbo.SECCION
+(
+	ID_SECCION,
+	NOMBRE_SECCION,
+	CANTIDAD_ESTUDIANTES
+				    
+)
+VALUES
+(   4,  -- ID_SECCION - int
+	'4A', -- NOMBRE_SECCION - varchar(10)
+	32 -- CANTIDAD_ESTUDIANTES - int
+				    
+	)
+GO
+
+/********************triggers***********************/
+CREATE TRIGGER cantidad_estudiantes
+	ON ESTUDIANTE_SECCION For INSERT 
+AS
+	UPDATE dbo.SECCION
+	SET CANTIDAD_ESTUDIANTES= CANTIDAD_ESTUDIANTES + 1
+	FROM dbo.SECCION INNER JOIN Inserted
+	ON  dbo.SECCION.ID_SECCION =  Inserted.ID_SECCION
+GO
+
+
+CREATE TRIGGER TRG_LIMITAR_ESTUDIANTE
+	ON dbo.SECCION FOR INSERT
+AS
+	DECLARE @cantidad_estudiante int 
+	SELECT @cantidad_estudiante = dbo.SECCION.CANTIDAD_ESTUDIANTES FROM dbo.SECCION INNER JOIN Inserted on dbo.SECCION.ID_SECCION = Inserted.ID_SECCION
+	IF @cantidad_estudiante > 30
+	BEGIN
+		RAISERROR('Una sección no puede tener más de 30 estudiantes.', 14, 1 )
+		ROLLBACK TRANSACTION
+	END
+GO
+
+
+CREATE TRIGGER TRG_ELIMINAR_ESTUDIANTE
+	ON dbo.ESTUDIANTE
+	INSTEAD OF DELETE
+AS
+begin
+	DELETE FROM dbo.ESTUDIANTE_SECCION WHERE ID_ESTUDIANTE IN (SELECT ID_ESTUDIANTE FROM Deleted);
+	DELETE FROM dbo.ESTUDIANTE_TUTOR WHERE ID_ESTUDIANTE IN (SELECT ID_ESTUDIANTE FROM Deleted);
+
+	DELETE dbo.ESTUDIANTE FROM Deleted AS D INNER JOIN dbo.ESTUDIANTE AS E 
+	ON D.ID_ESTUDIANTE = E.ID_ESTUDIANTE;
+end				
+GO
+
+/*******************PROCEDIMIENTOS ALMACENADOS*****************************/
+create proc insertar_datos_estudiantes
+	@Nombre_estudiante varchar(20),
+	@Apellido_estudiante varchar(20),
+	@Fecha_nacimiento date,
+	@Sexo_estudiante varchar(1),
+	@Direccion_Estudiante varchar(200)
+as
+	insert into ESTUDIANTE (NOMBRE_ESTUDIANTE, APELLIDO_ESTUDIANTE, FECHA_NACIMIENTO_ESTUDIANTE, SEXO_ESTUDIANTE, DIRECCION_ESTUDIANTE )
+	VALUES
+		(@Nombre_estudiante, @Apellido_estudiante, @Fecha_nacimiento, @Sexo_estudiante,  @Direccion_Estudiante )
+GO
+
+
+CREATE PROC buscar_matricula
+	@ID_ESTUDIANTE INT
+as
+	select * from ESTUDIANTE
+	where ID_ESTUDIANTE=@ID_ESTUDIANTE
+go
+
+
+create proc eliminar_estudiante
+	@ID_ESTUDIANTE INT
+as
+	delete ESTUDIANTE
+	where ID_ESTUDIANTE=@ID_ESTUDIANTE
+GO
+
+
+create proc insertar_datos_profesor
+	@Nombre_profesor varchar(20),
+	@Apellido_profesor varchar(20),
+	@Fecha_nacimiento date,
+	@Sexo_profesor varchar(1),
+	@Direccion_profesor varchar(200),
+	@telefono_profesor varchar(11)
+as
+	insert into PROFESOR (NOMBRE_PROFESOR, APELLIDO_PROFESOR, FECHA_NACIMIENTO_PROFESOR, SEXO_PROFESOR, DIRECCION_PROFESOR, TELEFONO_PROFESOR )
+	VALUES
+		(@Nombre_profesor, @Apellido_profesor, @Fecha_nacimiento, @Sexo_profesor,  @Direccion_profesor, @telefono_profesor )
+GO
+
+
+/**************************FUNCIONES****************************/
+CREATE FUNCTION dbo.CantEstudiante (@IdSeccion int)
+  RETURNS int
+AS BEGIN
+     DECLARE @Cantidad int 
+        select @Cantidad = sum(ESTUDIANTE_SECCION.id_estudiante) from ESTUDIANTE_SECCION where ID_SECCION =  @IdSeccion
+    RETURN @Cantidad
+END
+GO
+
+/*select dbo.CantEstudiante(2) as cantidad*/
+go
+
+
+
+CREATE FUNCTION dbo.BuscarMateria (@IdProfesor int, @Horario varchar(50))
+  RETURNS varchar(50)
+AS BEGIN
+     DECLARE @Materia varchar(255) 
+        select @Materia = materia.NOMBRE_MATERIA from SECCION_MATERIA inner join materia on SECCION_MATERIA.ID_MATERIA = MATERIA.ID_MATERIA 
+		where SECCION_MATERIa.ID_PROFESOR = @IdProfesor and SECCION_MATERIA.HORARIO = @Horario
+    RETURN @Materia
+END
+go	
+
+/*select dbo.BuscarMateria(1, '11-2PM') as materia*/
+go
+
+
+
+CREATE FUNCTION dbo.BuscarMateriaSeccion1 (@IdSeccion int)
+  RETURNS int
+AS BEGIN
+     DECLARE @cant int
+        select @cant = count(*) from SECCION_MATERIA where ID_SECCION = @IdSeccion
+    RETURN @cant
+END
+go
+
+/*select dbo.BuscarMateriaSeccion1 (2) as cantidad_materiasgo*/
+go
+
+/*******************************VISTAS************************************/
+create view EdadEstudiante As
+select Nombre_Estudiante, DATEDIFF(year,FECHA_NACIMIENTO_ESTUDIANTE,getdate()) as Edad from ESTUDIANTE ;
+go
+
+select * from EdadEstudiante
+GO
+
+create View VerNotas as 
+Select Estudiante.NOMBRE_ESTUDIANTE , nota.ID_MATERIA , nota.CALIFICACION  from nota inner join ESTUDIANTE on nota.ID_ESTUDIANTE = ESTUDIANTE.ID_ESTUDIANTE 
+GO
+
+create view Nota_Sobresaliente
+as
+select NOTA.ID_ESTUDIANTE AS id, NOMBRE_ESTUDIANTE as estudiante ,NOTA.CALIFICACION as sobresaliente 
+from NOTA inner join ESTUDIANTE on NOTA.ID_ESTUDIANTE = ESTUDIANTE.ID_ESTUDIANTE and CALIFICACION >= 90
+go
+
+

@@ -14,12 +14,19 @@ namespace SistemaMatriculacion.Controllers
     {
         private Sistema_matriculacionEntities db = new Sistema_matriculacionEntities();
 
+        [Authorize(Roles = "admin")]
         // GET: ESTUDIANTE
         public ActionResult Index()
         {
             return View(db.ESTUDIANTE.ToList());
         }
 
+        public ActionResult dashboard()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "admin")]
         // GET: ESTUDIANTE/Details/5
         public ActionResult Details(int? id)
         {
@@ -35,6 +42,7 @@ namespace SistemaMatriculacion.Controllers
             return View(eSTUDIANTE);
         }
 
+        [Authorize(Roles = "admin")]
         // GET: ESTUDIANTE/Create
         public ActionResult Create()
         {
@@ -46,6 +54,7 @@ namespace SistemaMatriculacion.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Create([Bind(Include = "ID_ESTUDIANTE,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
         {
             if (ModelState.IsValid)
@@ -58,6 +67,7 @@ namespace SistemaMatriculacion.Controllers
             return View(eSTUDIANTE);
         }
 
+        [Authorize(Roles = "admin")]
         // GET: ESTUDIANTE/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -78,6 +88,7 @@ namespace SistemaMatriculacion.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit([Bind(Include = "ID_ESTUDIANTE,NOMBRE_ESTUDIANTE,APELLIDO_ESTUDIANTE,FECHA_NACIMIENTO_ESTUDIANTE,SEXO_ESTUDIANTE,DIRECCION_ESTUDIANTE")] ESTUDIANTE eSTUDIANTE)
         {
             if (ModelState.IsValid)
@@ -90,6 +101,7 @@ namespace SistemaMatriculacion.Controllers
         }
 
         // GET: ESTUDIANTE/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -106,6 +118,7 @@ namespace SistemaMatriculacion.Controllers
 
         // POST: ESTUDIANTE/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
